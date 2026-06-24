@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h2 class="text-center">{{ legend }}</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <div class="mb-3">
+                        {{ form.title.label(class="form-label") }}
+                        {{ form.title(class="form-control") }}
+                        {% for error in form.title.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.content.label(class="form-label") }}
+                        {{ form.content(class="form-control", rows="10") }}
+                        {% for error in form.content.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {{ form.submit(class="btn btn-primary") }}
+                    {% if legend == 'Update Note' %}
+                    <a href="{{ url_for('notes') }}" class="btn btn-secondary">Cancel</a>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
