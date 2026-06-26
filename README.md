@@ -65,10 +65,42 @@ python -m unittest discover -s tests
 - Users can only access their own notes
 - Proper error handling for unauthorized access
 
-## Screenshots
-
-*(Add screenshots here)*
-
 ## License
 
 This project is licensed under the MIT License.
+
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+
+![Home Page](screenshots/home-page.png)
+
+---
+
+### 👤 User Registration
+
+![Register](screenshots/register-page.png)
+
+---
+
+### 🔐 User Login
+
+![Login](screenshots/login-page.png)
+
+---
+
+### 📝 Notes Dashboard
+
+![Dashboard](screenshots/notes-dashboard.png)
+
+---
+
+### ➕ Create a New Note
+
+![Create Note](screenshots/create-note.png)
+
+---
+
+### ✏️ Edit & 🗑️ Delete Note
+
+![Edit Delete](screenshots/edit-delete-note.png)
